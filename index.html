@@ -3,58 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Replifai - AI-driven insights for R&D leaders to navigate complex research data.">
-    <title>Replifai - AI-Powered Research Insights</title>
+    <meta name="description" content="Replifai - AI-powered insights for pharma and biotech research.">
+    <title>Replifai - AI-Driven Research Insights</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: #f4f7fa;
+            background: #f4f4f4;
             color: #333;
         }
         header {
-            background: #007BFF;
+            background: #005AE2;
             color: #fff;
             padding: 20px 10%;
-            text-align: center;
+            text-align: left;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
+            font-size: 2.2rem;
+            font-weight: 600;
         }
         nav {
-            margin: 20px 10%;
-            text-align: center;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            margin: 10px 10%;
         }
         nav a {
-            margin: 0 15px;
             text-decoration: none;
-            color: #007BFF;
+            color: #fff;
             font-weight: bold;
+            font-size: 0.9rem;
         }
         nav a:hover {
             text-decoration: underline;
         }
         .hero {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
             padding: 50px 10%;
         }
+        .hero-content {
+            max-width: 50%;
+        }
         .hero h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
+            color: #005AE2;
+            font-weight: 700;
         }
         .hero p {
             font-size: 1.1rem;
             margin-bottom: 30px;
             color: #555;
+            line-height: 1.6;
         }
         .cta-button {
-            background: #007BFF;
+            background: #005AE2;
             color: #fff;
             border: none;
             padding: 15px 25px;
@@ -64,31 +71,43 @@
             transition: background 0.3s ease;
         }
         .cta-button:hover {
-            background: #0056b3;
+            background: #0041b3;
         }
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .hero img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .section {
             padding: 50px 10%;
-            gap: 20px;
-        }
-        .feature {
             background: #fff;
+        }
+        .section h3 {
+            color: #005AE2;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .solutions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .solution {
+            flex: 1;
+            background: #f4f4f4;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            max-width: 300px;
-            text-align: center;
-            padding: 20px;
+            text-align: left;
         }
-        .feature h3 {
-            margin: 15px 0;
-            color: #007BFF;
-        }
-        .feature p {
-            font-size: 0.9rem;
-            color: #666;
+        .solution h4 {
+            margin: 0 0 10px;
+            color: #005AE2;
         }
         .footer {
             background: #333;
@@ -98,11 +117,18 @@
         }
         .footer p {
             margin: 0;
+            font-size: 0.9rem;
         }
         @media (max-width: 768px) {
-            .features {
+            .hero {
                 flex-direction: column;
-                align-items: center;
+                text-align: center;
+            }
+            .hero-content, .hero img {
+                max-width: 100%;
+            }
+            nav {
+                justify-content: center;
             }
         }
     </style>
@@ -110,43 +136,47 @@
 <body>
     <header>
         <h1>Replifai</h1>
-        <p>AI-powered insights to help you navigate research complexity.</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
     
-    <nav>
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    
     <section class="hero">
-        <h2>Transforming R&D with AI-Driven Clarity</h2>
-        <p>Replifai helps R&D leaders make critical decisions faster with data-driven insights into research quality, ensuring you focus on what matters most.</p>
-        <button class="cta-button">Get Started</button>
+        <div class="hero-content">
+            <h2>AI-Powered Research Insights</h2>
+            <p>Replifai’s AI engine predicts experimental outcomes, identifies high-quality leads, and optimizes your research process, accelerating drug discovery and development.</p>
+            <button class="cta-button">Request a Demo</button>
+        </div>
+        <img src="landing-img.png" alt="AI and DNA Illustration">
     </section>
     
-    <section id="features" class="features">
-        <div class="feature">
-            <h3>Analyze Research</h3>
-            <p>Leverage AI to analyze and prioritize research papers, identifying the most promising leads in your field.</p>
-        </div>
-        <div class="feature">
-            <h3>Optimize Experiments</h3>
-            <p>Design experiments with confidence using Replifai’s insights to increase your success rate and minimize costs.</p>
-        </div>
-        <div class="feature">
-            <h3>Predict Outcomes</h3>
-            <p>Our models learn from millions of studies to predict the outcomes of new research paths, reducing uncertainty.</p>
-        </div>
+    <section id="about" class="section">
+        <h3>Building the Engine to Predict Success in Bio R&D</h3>
+        <p>Replifai transforms decision-making in life sciences. Our AI analyzes millions of studies, offering a new way to predict outcomes, optimize experiments, and drive innovation in drug discovery.</p>
     </section>
     
-    <section id="about" class="hero">
-        <h2>About Replifai</h2>
-        <p>Replifai is built for R&D leaders in biotechnology and pharmaceuticals who need to make informed decisions quickly. Our AI platform synthesizes vast amounts of research data to provide actionable insights, helping you identify trustworthy studies and avoid costly mistakes.</p>
+    <section id="solutions" class="section">
+        <h3>Solutions for Every Stage of R&D</h3>
+        <div class="solutions">
+            <div class="solution">
+                <h4>Replicability Scores & Quality Analysis</h4>
+                <p>Evaluate study reliability and focus on research that matters with our replicability scores, ensuring trustworthy data.</p>
+            </div>
+            <div class="solution">
+                <h4>Optimized Experimental Design</h4>
+                <p>Design better experiments using insights from previous studies, reducing trial and error and increasing success rates.</p>
+            </div>
+            <div class="solution">
+                <h4>Predictive Models for Clinical Success</h4>
+                <p>Allocate resources effectively by predicting the outcomes of clinical trials, focusing on the most promising drug candidates.</p>
+            </div>
+        </div>
     </section>
     
     <footer class="footer" id="contact">
-        <p>Contact us at <a href="mailto:info@replifai.com" style="color: #007BFF;">info@replifai.com</a></p>
+        <p>Contact us at <a href="mailto:hello@replifai.com" style="color: #005AE2;">info@replifai.com</a></p>
         <p>&copy; 2024 Replifai. All rights reserved.</p>
     </footer>
 </body>
